@@ -36,7 +36,6 @@ export function simulateTrade(
   lows: number[],
   closes: number[]
 ): SimulationResult {
-  const makerFee = 0.001; // 0.1%
   const takerFee = 0.002; // 0.2%
   
   // ATR-based slippage estimation

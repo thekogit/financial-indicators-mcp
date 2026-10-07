@@ -1,6 +1,6 @@
 // src/services/primes/intelligence.ts
-const POSITIVE_WORDS = new Set(['bullish', 'surge', 'growth', 'gain', 'support', 'etf', 'approval', 'buy', 'long', 'rally', 'upgrade']);
-const NEGATIVE_WORDS = new Set(['bearish', 'drop', 'crash', 'hack', 'sec', 'rejection', 'sell', 'short', 'liquidated', 'dump', 'lawsuit']);
+const POSITIVE_WORDS = new Set(['bullish', 'surge', 'growth', 'gain', 'approval', 'buy', 'rally', 'upgrade']);
+const NEGATIVE_WORDS = new Set(['bearish', 'drop', 'crash', 'hack', 'rejection', 'sell', 'liquidated', 'dump', 'lawsuit']);
 
 /**
  * Result of sentiment analysis on headlines.

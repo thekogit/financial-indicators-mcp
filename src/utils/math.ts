@@ -31,32 +31,52 @@ export function calculateZScore(value: number, series: number[]): number {
   return stdDev === 0 ? 0 : (value - mean) / stdDev;
 }
 
-/**
- * Estimates the Hurst Exponent for a series of prices using a simplified Rescaled Range (R/S) analysis.
- * The Hurst Exponent measures the long-term memory or persistence of a time series.
- * H > 0.5 indicates persistence, H < 0.5 indicates anti-persistence, and H = 0.5 indicates random walk.
- * 
- * @param prices - An array of numerical price values.
- * @returns The estimated Hurst Exponent, defaulting to 0.5 if data is insufficient.
- */
+export function mulberry32(seed: number): () => number {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function gaussian(rand: () => number): number {
+  return Math.sqrt(-2 * Math.log(1 - rand())) * Math.cos(2 * Math.PI * rand());
+}
+
+/** Hurst exponent: slope of log(mean R/S) against log(window size), windows 8, 16, 32 ... */
 export function calculateHurstExponent(prices: number[]): number {
-  if (prices.length < 10) return 0.5; // Neutral
-  const logReturns = calculateLogReturns(prices);
-  const n = logReturns.length;
-  const mean = ss.mean(logReturns);
-  const centered = logReturns.map(r => r - mean);
-  const cumulative = centered.reduce((acc, val) => {
-    const last = acc.length > 0 ? acc[acc.length - 1] : 0;
-    acc.push(last + val);
-    return acc;
-  }, [] as number[]);
+  const returns = calculateLogReturns(prices);
+  const n = returns.length;
+  if (n < 32) return 0.5;
+  const points: [number, number][] = [];
+  for (let size = 8; size <= Math.floor(n / 2); size *= 2) {
+    const rs: number[] = [];
+    for (let start = 0; start + size <= n; start += size) {
+      const chunk = returns.slice(start, start + size);
+      const mean = ss.mean(chunk);
+      let cum = 0, lo = Infinity, hi = -Infinity;
+      for (const r of chunk) { cum += r - mean; lo = Math.min(lo, cum); hi = Math.max(hi, cum); }
+      const sd = ss.standardDeviation(chunk);
+      if (sd > 0) rs.push((hi - lo) / sd);
+    }
+    if (rs.length > 0) points.push([Math.log(size), Math.log(ss.mean(rs))]);
+  }
+  if (points.length < 2) return 0.5;
+  return ss.linearRegression(points).m;
+}
 
-  const range = Math.max(...cumulative) - Math.min(...cumulative);
-  const stdDev = ss.standardDeviation(logReturns);
-
-  if (stdDev === 0) return 0.5;
-  const rs = range / stdDev;
-  return Math.log(rs) / Math.log(n);
+/** 5th and 95th percentile of the Hurst estimate on simulated random walks of the same length. */
+export function randomWalkHurstBand(nPrices: number, sims = 200, seed = 42): { p5: number; p95: number } {
+  const rand = mulberry32(seed);
+  const hs: number[] = [];
+  for (let k = 0; k < sims; k++) {
+    let p = 100;
+    const prices = [p];
+    for (let i = 1; i < nPrices; i++) { p *= Math.exp(0.01 * gaussian(rand)); prices.push(p); }
+    hs.push(calculateHurstExponent(prices));
+  }
+  return { p5: ss.quantile(hs, 0.05), p95: ss.quantile(hs, 0.95) };
 }
 
 /**
