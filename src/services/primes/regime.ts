@@ -1,5 +1,5 @@
 // src/services/primes/regime.ts
-import { calculateHurstExponent } from '../../utils/math.js';
+import { calculateHurstExponent, randomWalkHurstBand } from '../../utils/math.js';
 import * as ss from 'simple-statistics';
 
 /**
@@ -50,9 +50,10 @@ export function detectRegime(prices: number[], history: number[]): MarketRegime 
     : 0.5;
   
   let regime: MarketRegime['regime'] = 'Stable';
+  const band = randomWalkHurstBand(prices.length);
   if (volPercentile > 0.8) regime = 'High-Volatility';
-  else if (hurst > 0.55) regime = 'Trending';
-  else if (hurst < 0.45) regime = 'Mean-Reverting';
+  else if (hurst > band.p95) regime = 'Trending';
+  else if (hurst < band.p5) regime = 'Mean-Reverting';
   
   const confidenceMatrix = getConfidenceMatrix(regime);
   

@@ -1,5 +1,7 @@
-node_modules
-dist
+node_modules/
+dist/
 .env
-.superpowers
-plots
+.superpowers/
+plots/
+.omg/
+docs/superpowers/

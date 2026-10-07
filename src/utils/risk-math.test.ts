@@ -1,5 +1,6 @@
+import { describe, it } from 'node:test';
+import * as assert from 'node:assert';
 import { calculateKellyFraction, calculateHistoricalVaR } from './risk-math.js';
-import * as assert from 'assert';
 
 describe('Risk Math Utilities', () => {
   it('should calculate Kelly Fraction correctly', () => {

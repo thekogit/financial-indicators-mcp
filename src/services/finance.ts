@@ -17,18 +17,18 @@ export async function getStockPrice(symbol: string) {
 }
 
 export async function getStockHistory(symbol: string, interval: any = '1d', limit: number = 100) {
-  // Calculate period1 based on interval and limit
+  // Calculate period1 based on interval and limit (multiplied to ensure enough trading bars)
   const now = new Date();
   let period1: Date;
   
   switch(interval) {
-    case '1m': period1 = new Date(now.getTime() - limit * 60 * 1000); break;
-    case '5m': period1 = new Date(now.getTime() - limit * 5 * 60 * 1000); break;
-    case '1h': period1 = new Date(now.getTime() - limit * 60 * 60 * 1000); break;
-    case '1wk': period1 = new Date(now.getTime() - limit * 7 * 24 * 60 * 60 * 1000); break;
+    case '1m': period1 = new Date(now.getTime() - limit * 6 * 60 * 1000); break;
+    case '5m': period1 = new Date(now.getTime() - limit * 6 * 5 * 60 * 1000); break;
+    case '1h': period1 = new Date(now.getTime() - limit * 6 * 60 * 60 * 1000); break;
+    case '1wk': period1 = new Date(now.getTime() - limit * 2 * 7 * 24 * 60 * 60 * 1000); break;
     case '1d': 
     default:
-      period1 = new Date(now.getTime() - limit * 24 * 60 * 60 * 1000);
+      period1 = new Date(now.getTime() - limit * 2 * 24 * 60 * 60 * 1000);
   }
 
   const result = await yahooFinance.chart(symbol, {
@@ -43,7 +43,7 @@ export async function getStockHistory(symbol: string, interval: any = '1d', limi
     low: q.low,
     close: q.close,
     volume: q.volume
-  })).filter(q => q.close !== undefined);
+  })).filter(q => q.close !== undefined).slice(-limit);
 }
 
 export async function getMarketNews(symbol?: string) {
