@@ -77,10 +77,6 @@ npm test
 - The headline keyword scorer is a simple baseline heuristic
 - Not financial or investment advice
 
-## How I used AI
-
-I used Antigravity to draft parts of the code. I chose the design, reviewed every change, rewrote the Hurst calibration and date-aligned return correlation, and wrote the tests in src/ to check it. Agent-made commits are visible in the history.
-
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
