@@ -14,10 +14,10 @@ The server exposes 11 tools communicating over standard input/output (stdio):
 
 | Tool | Description |
 |---|---|
-| `get-price` | Get current price for a stock or crypto symbol |
-| `get-indicators` | Calculate technical indicators (RSI, MACD, Bollinger Bands) and market regime |
-| `plot-indicators` | Generate a PNG plot of price action and technical indicators |
-| `get-market-news` | Fetch latest market news, optionally filtered by symbol |
+| `get-price` | Fetch latest quote (price, day change, % change, day high/low, volume) from Yahoo Finance for equities or Binance via CCXT for crypto pairs. |
+| `get-indicators` | Compute 14-period RSI, MACD (12, 26, 9), 20-period Bollinger Bands (±2σ), and statistical regime confidence matrix over close prices. |
+| `plot-indicators` | Generate a 3-panel PNG chart showing price with 20-period Bollinger Bands, 14-period RSI, and MACD lines, annotated with detected market regime. |
+| `get-market-news` | Fetch recent news articles (title, publisher, link, publish time) from Yahoo Finance search, optionally filtered by symbol. |
 | `get-market-regime` | Classify the regime as Trending, Mean-Reverting, High-Volatility or Stable from a multi-window Hurst estimate (compared with simulated random walks) and the current volatility percentile. |
 | `get-engineered-features` | Return log returns, the 20-bar z-score, Bollinger %B and the % distance from the 20-bar mean. |
 | `get-headline-keyword-score` | Score recent Yahoo Finance headlines with a small keyword list from −1 (bearish) to 1 (bullish). A rough heuristic, not a language model. The raw headlines are returned too. |
@@ -76,6 +76,10 @@ npm test
 - Hurst exponent estimation on 100 bars remains noisy
 - The headline keyword scorer is a simple baseline heuristic
 - Not financial or investment advice
+
+## How I used AI
+
+I used Antigravity to draft parts of the code. I chose the architecture, reviewed every change, rewrote the Hurst calibration and date-aligned return correlation, and wrote the test suite in `src/` to verify calculations. Agent-made commits are visible in the git history.
 
 ## License
 

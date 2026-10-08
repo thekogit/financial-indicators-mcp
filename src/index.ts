@@ -20,7 +20,7 @@ const server = new McpServer({
   version: '1.0.0'
 });
 
-server.tool('get-price', 'Get current price for a stock or crypto symbol', {
+server.tool('get-price', 'Fetch latest quote (price, day change, % change, day high/low, volume) from Yahoo Finance for equities or Binance via CCXT for crypto pairs.', {
   symbol: z.string().describe('Ticker symbol (e.g. AAPL, BTC/USDT)')
 }, async ({ symbol }) => {
   try {
@@ -36,7 +36,7 @@ server.tool('get-price', 'Get current price for a stock or crypto symbol', {
   }
 });
 
-server.tool('get-indicators', 'Calculate technical indicators (RSI, MACD, Bollinger Bands) and market regime', {
+server.tool('get-indicators', 'Compute 14-period RSI, MACD (12, 26, 9), 20-period Bollinger Bands (±2σ), and statistical regime confidence matrix over close prices.', {
   symbol: z.string().describe('Ticker symbol'),
   interval: z.enum(['1m', '5m', '1h', '1d', '1wk']).default('1d').describe('Time interval'),
   limit: z.number().default(100).describe('Number of data points to return')
@@ -79,7 +79,7 @@ server.tool('get-indicators', 'Calculate technical indicators (RSI, MACD, Bollin
   }
 });
 
-server.tool('plot-indicators', 'Generate a PNG plot of price action and technical indicators', {
+server.tool('plot-indicators', 'Generate a 3-panel PNG chart showing price with 20-period Bollinger Bands, 14-period RSI, and MACD lines, annotated with detected market regime.', {
   symbol: z.string().describe('Ticker symbol'),
   interval: z.enum(['1m', '5m', '1h', '1d', '1wk']).default('1d').describe('Time interval'),
   limit: z.number().default(100).describe('Number of periods to plot')
@@ -121,7 +121,7 @@ server.tool('plot-indicators', 'Generate a PNG plot of price action and technica
   }
 });
 
-server.tool('get-market-news', 'Fetch latest market news, optionally filtered by symbol', {
+server.tool('get-market-news', 'Fetch recent news articles (title, publisher, link, publish time) from Yahoo Finance search, optionally filtered by symbol.', {
   symbol: z.string().optional().describe('Ticker symbol for specific news')
 }, async ({ symbol }) => {
   try {
