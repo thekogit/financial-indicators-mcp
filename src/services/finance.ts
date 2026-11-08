@@ -46,8 +46,19 @@ export async function getStockHistory(symbol: string, interval: any = '1d', limi
   })).filter(q => q.close !== undefined).slice(-limit);
 }
 
-export async function getMarketNews(symbol?: string) {
+export interface NewsItem {
+  uuid?: string;
+  title: string;
+  publisher?: string;
+  link?: string;
+  providerPublishTime?: string | number | Date;
+  relatedTickers?: string[];
+}
+
+export async function getMarketNews(symbol?: string): Promise<NewsItem[]> {
   const query = symbol || 'market news';
-  const result = await yahooFinance.search(query);
-  return result.news;
+  // Yahoo's search payload drifts from yahoo-finance2's schema in the `quotes` part (which we
+  // don't use), and strict validation then rejects the whole response, news included.
+  const result = await yahooFinance.search(query, {}, { validateResult: false }) as { news?: NewsItem[] };
+  return result.news ?? [];
 }
