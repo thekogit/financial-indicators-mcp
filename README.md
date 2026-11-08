@@ -40,6 +40,21 @@ Evaluated on the Financial PhraseBank dataset (Malo et al., 2014):
 
 The simple keyword dictionary marginally exceeds the always-neutral baseline by 0.7 percentage points, demonstrating that word matching functions only as a rough baseline rather than a true sentiment model.
 
+## Agent evaluation
+
+Unit tests check the maths; [`evals/`](evals/README.md) checks whether an LLM agent uses the tools correctly. It has a 200-query benchmark (ambiguous tickers, multi-horizon regime comparisons, requests for guaranteed returns and more), deterministic Level 1 assertions on every tool call, and a pinned Level 2 binary judge for "unhedged financial advice when the signals conflict".
+
+Runs of 2026-11-08 on Ollama Cloud, market data recorded 2026-11-07 (`npm run eval:run [-- --model gemma4:31b]`, then `npm run eval:l1`):
+
+| Metric | `beam:cloud` | `gemma4:31b` |
+|---|---|---|
+| Level 1 pass rate | 181 / 200 (90.5%) | 189 / 200 (94.5%) |
+| Most common failure | RSI period passed as `limit` (10 traces) | `limit: 1` for "the current value" (7 traces) |
+| Schema-breaking calls recovered | 8 of 9 traces | none made |
+| Level 2 judge flags (unhedged advice) | 4 / 200 | 4 / 200 |
+
+Judge vs reference labels: **human agreement pending** (no human labels yet). Against labels written by the AI coding agent that built the harness (400 traces, 3 FAIL), the judge found all 3 and raised 5 more (kappa 0.54). That is model-to-model agreement, not a human measurement, and too few FAILs for the split-based calibration. Details in [`evals/README.md`](evals/README.md#results).
+
 ## Quickstart
 
 ```bash
@@ -69,6 +84,8 @@ Configure in Claude Desktop or an MCP client:
 npm test
 ```
 
+The tests never touch the network: the server is exercised over an in-memory MCP transport with synthetic market data.
+
 ## Limitations
 
 - Yahoo Finance is an unofficial API with delayed data
@@ -80,6 +97,8 @@ npm test
 ## How I used AI
 
 I used Antigravity to draft parts of the code. I chose the architecture, reviewed every change, rewrote the Hurst calibration and date-aligned return correlation, and wrote the test suite in `src/` to verify calculations. Agent-made commits are visible in the git history.
+
+The evaluation harness in `evals/` and `src/evals/` (benchmark prompts, assertions, judge rubric and calibration code) was written by Claude Code, an AI coding agent, from my plan. The benchmark agents (`beam:cloud`, `gemma4:31b`) and the judge (`beam:cloud`) are themselves LLMs. At my request Claude also labelled the 400 traces for the judge's criterion; those labels are marked `labeler_kind: "ai_agent"` and are reported separately from human labels, which have not been collected yet.
 
 ## License
 
