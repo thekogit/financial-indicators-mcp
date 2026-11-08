@@ -5,3 +5,39 @@ dist/
 plots/
 .omg/
 docs/superpowers/
+
+# --- Downloaded assets and local eval state (never published) ---------------
+# Market-data snapshots from Yahoo Finance / Binance: re-create with `npm run eval:fetch`.
+evals/fixtures/
+# LLM response cache and third-party datasets (Financial PhraseBank, CC BY-NC-SA).
+data/
+*.tgz
+
+# --- AI agents' working traces: plans, memories, chat logs, local configs -----
+.codex/
+.gemini/
+GEMINI.md
+CLAUDE.local.md
+.mcp.json
+.cursorrules
+.windsurf/
+.windsurfrules
+.continue/
+.copilot/
+.clinerules
+.roo/
+.kiro/
+.junie/
+.serena/
+.specstory/
+.history/
+.agent/
+.agents/
+.antigravity/
+memory-bank/
+
+# --- Editor and OS clutter ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
