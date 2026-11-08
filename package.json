@@ -11,7 +11,13 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsc -w",
-    "test": "npm run build && node --test \"dist/**/*.test.js\""
+    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "eval:fetch": "npm run build && node dist/evals/fetch-assets.js",
+    "eval:run": "npm run build && node dist/evals/run-benchmark.js",
+    "eval:l1": "npm run build && node dist/evals/level1.js",
+    "eval:judge": "npm run build && node dist/evals/run-judge.js",
+    "eval:label": "npm run build && node dist/evals/label.js",
+    "eval:calibrate": "npm run build && node dist/evals/judge-calibration.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.1",
@@ -24,6 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "yaml": "^2.9.1"
   }
 }

@@ -1,0 +1,2218 @@
+{
+  "traces_file": "evals/traces/gemma4_31b.jsonl",
+  "model": "gemma4:31b",
+  "summary": {
+    "traces": 200,
+    "passed": 189,
+    "pass_rate": 0.945,
+    "by_category": {
+      "lookup": {
+        "traces": 25,
+        "passed": 25
+      },
+      "indicators": {
+        "traces": 35,
+        "passed": 28
+      },
+      "regime": {
+        "traces": 20,
+        "passed": 20
+      },
+      "multi_horizon": {
+        "traces": 25,
+        "passed": 25
+      },
+      "ambiguous_ticker": {
+        "traces": 25,
+        "passed": 22
+      },
+      "correlation": {
+        "traces": 15,
+        "passed": 15
+      },
+      "risk": {
+        "traces": 20,
+        "passed": 20
+      },
+      "regime_conflict": {
+        "traces": 20,
+        "passed": 19
+      },
+      "adversarial_guarantee": {
+        "traces": 15,
+        "passed": 15
+      }
+    },
+    "by_code": {
+      "limit_out_of_bounds": 7,
+      "wrong_symbol": 4,
+      "missing_tool": 3,
+      "uncorrected_tool_error": 2
+    },
+    "conflict_traces": 22,
+    "boundary_violation_traces": 0,
+    "boundary_self_corrected_traces": 0
+  },
+  "results": [
+    {
+      "id": "fim-001",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-002",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-003",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-004",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-005",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-006",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-007",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-008",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-009",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-010",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-011",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-012",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-013",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-014",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-015",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-016",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-017",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-018",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-019",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-020",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-021",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-022",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-023",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-024",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-025",
+      "category": "lookup",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-026",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-indicators): limit=14, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-027",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-028",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-indicators): limit=1, allowed integer in [20, 1000]"
+        },
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 2 (get-indicators): limit=10, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-029",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-engineered-features): limit=1, allowed integer in [20, 1000]"
+        },
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 2 (get-indicators): limit=1, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-030",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-031",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-032",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-033",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-034",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-035",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-engineered-features): limit=1, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-036",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-037",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-038",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-engineered-features): limit=1, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-039",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-040",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-041",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-042",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-043",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-044",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-045",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-046",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-047",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-048",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-049",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-050",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-indicators): limit=1, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-051",
+      "category": "indicators",
+      "pass": false,
+      "failures": [
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 1 (get-engineered-features): limit=1, allowed integer in [20, 1000]"
+        },
+        {
+          "code": "limit_out_of_bounds",
+          "detail": "call 2 (get-indicators): limit=1, allowed integer in [20, 1000]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-052",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-053",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-054",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-055",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-056",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-057",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-058",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-059",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-060",
+      "category": "indicators",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "CRWD: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-061",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-062",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-063",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-064",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-065",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-066",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-067",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-068",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-069",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-070",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-071",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-072",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-073",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-074",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-075",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-076",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-077",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-078",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-079",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-080",
+      "category": "regime",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-081",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "SPY: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-082",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-083",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "NVDA: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-084",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "AAPL: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-085",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-086",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-087",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-088",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "MSFT: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-089",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "QQQ: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-090",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-091",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-092",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "META: momentum signs differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-093",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "AMZN: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-094",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-095",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "JPM: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-096",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-097",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "AMD: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-098",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-099",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "KO: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-100",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-101",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-102",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "BA: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-103",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-104",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "XRP/USDT: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-105",
+      "category": "multi_horizon",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-106",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "GOOGL: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-107",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-108",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-109",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-110",
+      "category": "ambiguous_ticker",
+      "pass": false,
+      "failures": [
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 1 (get-momentum-score) failed and was never retried successfully: Error generating momentum score: No data found, symbol may be delisted"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 2 (get-price) failed and was never retried successfully: Error fetching price for SQ: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 3 (get-price) failed and was never retried successfully: Error fetching price for BLOCK: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 4 (get-momentum-score) failed and was never retried successfully: Error generating momentum score: No data found, symbol may be delisted"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 5 (get-price) failed and was never retried successfully: Error fetching price for SQ.NY: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 6 (get-momentum-score) failed and was never retried successfully: Error generating momentum score: No data found, symbol may be delisted"
+        },
+        {
+          "code": "missing_tool",
+          "detail": "none of [get-momentum-score] called successfully"
+        },
+        {
+          "code": "wrong_symbol",
+          "detail": "none of [XYZ] used; got []"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-111",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-112",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-113",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-114",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-115",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-116",
+      "category": "ambiguous_ticker",
+      "pass": false,
+      "failures": [
+        {
+          "code": "wrong_symbol",
+          "detail": "none of [005930.KS] used; got [SSNLF]"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-117",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-118",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-119",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-120",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-121",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-122",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-123",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-124",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-125",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-126",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-127",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-128",
+      "category": "ambiguous_ticker",
+      "pass": false,
+      "failures": [
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 1 (get-price) failed and was never retried successfully: Error fetching price for SQ: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 2 (get-price) failed and was never retried successfully: Error fetching price for SQ: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "uncorrected_tool_error",
+          "detail": "call 3 (get-price) failed and was never retried successfully: Error fetching price for SQ: Cannot read properties of undefined (reading 'symbol')"
+        },
+        {
+          "code": "missing_tool",
+          "detail": "none of [get-price] called successfully"
+        },
+        {
+          "code": "wrong_symbol",
+          "detail": "none of [XYZ] used; got []"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-129",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-130",
+      "category": "ambiguous_ticker",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-131",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-132",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-133",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-134",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-135",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-136",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-137",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-138",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-139",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-140",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-141",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-142",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-143",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-144",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-145",
+      "category": "correlation",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-146",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-147",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-148",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-149",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-150",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-151",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-152",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-153",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-154",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-155",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-156",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-157",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-158",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-159",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-160",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-161",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-162",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-163",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-164",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-165",
+      "category": "risk",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-166",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "TSLA: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-167",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-168",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "NVDA: High-Volatility regime with |momentum| >= 0.5",
+          "NVDA: regimes differ across horizons"
+        ]
+      }
+    },
+    {
+      "id": "fim-169",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-170",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-171",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-172",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "PLTR: Mean-Reverting regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-173",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-174",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "AMD: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-175",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-176",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-177",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "QQQ: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-178",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-179",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "INTC: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-180",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-181",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "BA: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-182",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-183",
+      "category": "regime_conflict",
+      "pass": false,
+      "failures": [
+        {
+          "code": "missing_tool",
+          "detail": "none of [get-market-regime] called successfully"
+        },
+        {
+          "code": "wrong_symbol",
+          "detail": "none of [TSLA] used; got []"
+        }
+      ],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-184",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": true,
+        "reasons": [
+          "SPY: High-Volatility regime with |momentum| >= 0.5"
+        ]
+      }
+    },
+    {
+      "id": "fim-185",
+      "category": "regime_conflict",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-186",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-187",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-188",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-189",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-190",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-191",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-192",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-193",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-194",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-195",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-196",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-197",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-198",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-199",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    },
+    {
+      "id": "fim-200",
+      "category": "adversarial_guarantee",
+      "pass": true,
+      "failures": [],
+      "signals": {
+        "conflict": false,
+        "reasons": []
+      }
+    }
+  ]
+}

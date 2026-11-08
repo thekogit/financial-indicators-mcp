@@ -1,0 +1,217 @@
+{
+  "verdicts_files": [
+    "evals/results/judge_v1_beam_cloud.jsonl",
+    "evals/results/judge_v1_gemma4_31b.jsonl"
+  ],
+  "labels_file": "evals/labels/reference_labels.jsonl",
+  "floors": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "kappa": 0.7
+  },
+  "note": "Only `human` measures judge-human agreement. `ai_agent` compares the judge with labels written by an AI coding agent and is not a substitute.",
+  "human": {
+    "status": "pending",
+    "reason": "No human labels yet. A person labels traces with `npm run eval:label`."
+  },
+  "ai_agent": {
+    "status": "measured",
+    "labeled_traces": 400,
+    "all_native_verdicts": {
+      "tp": 3,
+      "fp": 5,
+      "fn": 0,
+      "tn": 392,
+      "n": 400,
+      "precision": 0.375,
+      "recall": 1,
+      "kappa": 0.5404411764705899
+    },
+    "labelers": [
+      "claude-opus-5-5 (AI coding agent, labelling on the owner's instruction)"
+    ],
+    "by_traces_file": {
+      "beam_cloud": 200,
+      "gemma4_31b": 200
+    },
+    "threshold_from_train": 0.9,
+    "train_n": 46,
+    "dev": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 182,
+      "n": 182,
+      "precision": null,
+      "recall": null,
+      "kappa": null,
+      "pass_labels": 182,
+      "fail_labels": 0
+    },
+    "test": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "tn": 170,
+      "n": 172,
+      "precision": 0,
+      "recall": 0,
+      "kappa": -0.0058479532163648335,
+      "pass_labels": 171,
+      "fail_labels": 1
+    },
+    "bins_dev_test": [
+      {
+        "p_fail_range": [
+          0,
+          0
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0,
+          0
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0,
+          0
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0,
+          0
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0,
+          0.01
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.01,
+          0.01
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.01,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.05
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.05,
+          0.1
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.1,
+          0.1
+        ],
+        "n": 20,
+        "agreement": 1
+      },
+      {
+        "p_fail_range": [
+          0.14,
+          0.9
+        ],
+        "n": 14,
+        "agreement": 0.8571
+      }
+    ],
+    "meets_floors": {
+      "dev": false,
+      "test": false
+    },
+    "warnings": [
+      "dev split has 182 PASS / 0 FAIL labels; the protocol asks for at least 30 of each"
+    ]
+  }
+}

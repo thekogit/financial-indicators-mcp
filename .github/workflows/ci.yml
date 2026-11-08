@@ -11,3 +11,5 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - name: Level 1 assertions are reproducible
+        run: node dist/evals/level1.js --check
